@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">			
+
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<title> Sénémania</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">		
+  <!-- Brand -->
+  <a class="navbar-brand" href="index.php">Sénémania</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Acceuil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">les realisateurs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">les acteurs</a>
+      </li> 
+       <li class="nav-item">
+        <a class="nav-link" href="#">les genres</a>
+      </li> 
+       <li class="nav-item">
+        <a class="nav-link" href="./admin/index.php">Administration</a>
+      </li> 
+    </ul>
+  </div> 
+</nav>
+
+{% block head %}
+  <title>Detail films</title>
+
+{% endblock %}
+
+
+<center>{% block content %}
+<h1>{{ post.nom_film }}</h1>
+  
+	
+		<img src="{{ post.photo_film }}">
+		<p> <h3>Titre </h3>{{ post.nom_film }}</p>
+		
+		<p><h3>Date de sortie </h3>  {{ post.an_sortie}}</p>
+		<p><h3>Genre  </h3>{{ post.genre}}</p>
+        <p><h3>Realisateur  </h3> {{ post.realisateur}}</p>
+        <p><h3>Description </h3> {{ post.description }}</p>
+
+ 
+{% endblock %}
+</center>	
+
+
+</body>
+</html>

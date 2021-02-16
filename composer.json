@@ -1,0 +1,6 @@
+{
+    "name": "babacar/twig",
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}

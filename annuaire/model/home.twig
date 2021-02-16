@@ -1,0 +1,14 @@
+{% block head %}
+  <title>Film</title>
+{% endblock %}
+
+
+{% block content %}
+<h1>Les films</h1>
+  <ul>
+	{% for film in film %}
+	<li>{{ film.nom_film }}</li>
+  </ul>
+  {% endfor  %}
+
+{% endblock %}
